@@ -1,5 +1,5 @@
 "use client";
-import { Search } from "lucide-react";
+import { Heart, Search, ShoppingCart, User } from "lucide-react";
 
 export default function TopNavbar() {
   const scrollTo = (id: string) => {
@@ -24,16 +24,29 @@ export default function TopNavbar() {
       </div>
       {/* Links */}
       <div className="flex items-center gap-6">
-      <button onClick={() => scrollTo("hero")} className="hover:text:black">
-        Home
-      </button>
-      <button onClick={() => scrollTo("about")} className="text-gray-500 hover:text-black">
-        About
-      </button>
-      <button onClick={() => scrollTo("contact")} className="text-gray-500 hover:text-black">
-        Contact
-      </button>
+        <button onClick={() => scrollTo("hero")} className="hover:text:black">
+          Home
+        </button>
+        <button
+          onClick={() => scrollTo("about")}
+          className="text-gray-500 hover:text-black"
+        >
+          About
+        </button>
+        <button
+          onClick={() => scrollTo("contact")}
+          className="text-gray-500 hover:text-black"
+        >
+          Contact
+        </button>
+      </div>
+      {/* Icons */}
+      <div className="flex gap-4">
+        <Heart size={20} />
+        <ShoppingCart size={20} />
+        <User size={20} />
       </div>
     </div>
   );
 }
+
