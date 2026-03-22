@@ -1,11 +1,13 @@
 import TopNavbar from "./components/landing/ui/main-nav";
 import CategoryNavbar from "./components/landing/ui/category-navbar";
+import Hero  from "./components/landing/hero-banner";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <TopNavbar />
       <CategoryNavbar />
+      <Hero />
     </div>
   );
 }
