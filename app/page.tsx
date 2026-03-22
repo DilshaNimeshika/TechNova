@@ -1,6 +1,7 @@
 import TopNavbar from "./components/landing/ui/main-nav";
 import CategoryNavbar from "./components/landing/ui/category-navbar";
 import Hero  from "./components/landing/hero-banner";
+import CategorySection from "./components/categories/category-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <TopNavbar />
       <CategoryNavbar />
       <Hero />
+      <CategorySection />
     </div>
   );
 }
