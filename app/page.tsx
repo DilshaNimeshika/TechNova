@@ -3,6 +3,8 @@ import CategoryNavbar from "./components/landing/ui/category-navbar";
 import Hero  from "./components/landing/hero-banner";
 import CategorySection from "./components/categories/category-section";
 import Products from "./components/categories/product-grid";
+import PopularProducts from "./components/categories/popular-products";
+import DiscountSection from "./components/discount-section";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <Hero />
       <CategorySection />
       <Products />
+      <PopularProducts />
+      <DiscountSection />
     </div>
   );
 }
