@@ -1,10 +1,13 @@
 "use client";
+
 import DiscountCard from "./discount-card";
 export default function DiscountSection() {
   return (
     <section className="px-10 py-16 bg-gray-50">
       {/* Title */}
+
       <h2 className="text-2xl font-bold mb-8 ">Special Discounts</h2>
+
       {/* Discount Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <DiscountCard

@@ -5,6 +5,7 @@ import CategorySection from "./components/categories/category-section";
 import Products from "./components/categories/product-grid";
 import PopularProducts from "./components/categories/popular-products";
 import DiscountSection from "./components/discount-section";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Products />
       <PopularProducts />
       <DiscountSection />
+      <Footer />
     </div>
   );
 }
