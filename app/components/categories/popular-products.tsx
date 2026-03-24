@@ -5,15 +5,15 @@ import Image from "next/image";
 
 const items = [
   {
-    title: "Sony Camera",
+    title: "Ipad",
     desc: "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
-    img: "/products/watch.png",
+    img: "/images/ipad.jpg",
     dark: false,
   },
   {
     title: "Ipad Pro",
     desc: "iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.",
-    img: "/products/ipad.png",
+    img: "/images/ipad pro.jpg",
     dark: true,
   },
   {

@@ -7,42 +7,42 @@ const products = [
   {
     name: "Apple iPhone 14 Pro Max 128GB Deep Purple",
     price: "$900",
-    image: "/images/iphone-14-pro-max-deep-purple.jpg",
+    image: "/images/Apple iPhone 14 Pro Max 128GB Deep Purple.jpg",
   },
   {
     name: "Blackmagic Pocket Cinema Camera 6k",
     price: "$2535",
-    image: "/images/blackmagic-pocket-cinema-camera-6k.jpg",
+    image: "/images/Blackmagic Pocket Cinema Camera 6k.jpg",
   },
   {
     name: "Apple Watch Series 9 GPS 41mm",
     price: "$399",
-    image: "/products/watch.png",
+    image: "/images/Apple Watch Series 9 GPS 41mm.jpg",
   },
   {
     name: "AirPods Max Silver",
     price: "$549",
-    image: "/products/headphone.png",
+    image: "/images/AirPods Max Silver.jpg",
   },
   {
     name: "Samsung Galaxy Watch6 Classic",
     price: "$369",
-    image: "/products/watch2.png",
+    image: "/images/Samsung Galaxy Watch6 Classic.jpg",
   },
   {
     name: "Galaxy Z Fold5 Unlocked 256GB",
     price: "$1799",
-    image: "/products/fold.png",
+    image: "/images/Galaxy Z Fold5 Unlocked 256GB.jpg",
   },
   {
     name: "Galaxy Buds FE Graphite",
     price: "$99.99",
-    image: "/products/buds.png",
+    image: "/images/Galaxy Buds FE Graphite.jpg",
   },
   {
     name: 'Apple iPad 9 10.2" 64GB Wi-Fi',
     price: "$398",
-    image: "/products/ipad.png",
+    image: "/images/Apple iPad 9 10.2.jpg",
   },
 ];
 
