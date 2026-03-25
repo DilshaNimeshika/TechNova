@@ -1,51 +1,68 @@
 "use client";
-import { Heart, Search, ShoppingCart, User } from "lucide-react";
+
+import { Search, Heart, ShoppingCart, User, Camera } from "lucide-react";
+import { useRef } from "react";
 
 export default function TopNavbar() {
-  const scrollTo = (id: string) => {
-    const section = document.getElementById(id);
-    section?.scrollIntoView({ behavior: "smooth" });
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleCameraClick = () => {
+    fileInputRef.current?.click(); // open file explorer
   };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      console.log("Selected image:", file);
+      // 👉 later you can upload this image to backend / AI search
+    }
+  };
+
   return (
-    <div className="flex items-center justify-between px-10 py-4 border-b sticky top-0 bg-white z-50">
-      {/* logo */}
-      <div className="text-xl font-bold">▾ TechNova</div>
-      {/* search */}
-      <div className="flex items-center bg-gray-100 px-6 py-3 rounded-md w-1/3">
-        {/* search icon */}
+    <div className="flex items-center justify-between px-10 py-4 border-b bg-white">
 
-        <Search size={18} className="text-gray-500" />
+      {/* Logo */}
+      <div className="text-xl font-bold text-black">
+        TechNova
+      </div>
 
+      {/* Search Bar */}
+      <div className="flex items-center bg-gray-100 px-6 py-4 rounded-full w-[40%]">
+
+        {/* Input */}
         <input
           type="text"
-          placeholder="Search"
-          className="bg-transparent outline-none ml-2 w-full"
+          placeholder="Search products..."
+          className="bg-transparent outline-none flex-1 text-sm"
+        />
+
+        {/* Camera Icon */}
+        <Camera
+          size={20}
+          className="text-gray-500 cursor-pointer mx-2"
+          onClick={handleCameraClick}
+        />
+
+        {/* Search Icon */}
+        <Search size={20} className="text-gray-500 cursor-pointer" />
+
+        {/* Hidden File Input */}
+        <input
+          type="file"
+          ref={fileInputRef}
+          onChange={handleFileChange}
+          className="hidden"
+          accept="image/*"
         />
       </div>
-      {/* Links */}
-      <div className="flex items-center gap-6">
-        <button onClick={() => scrollTo("hero")} className="hover:text:black">
-          Home
-        </button>
-        <button
-          onClick={() => scrollTo("about")}
-          className="text-gray-500 hover:text-black"
-        >
-          About
-        </button>
-        <button
-          onClick={() => scrollTo("contact")}
-          className="text-gray-500 hover:text-black"
-        >
-          Contact
-        </button>
-      </div>
+
       {/* Icons */}
-      <div className="flex gap-4">
-        <Heart size={20} />
-        <ShoppingCart size={20} />
-        <User size={20} />
+      <div className="flex items-center gap-5 text-gray-500">
+        <Heart className="cursor-pointer hover:text-black" />
+        <ShoppingCart className="cursor-pointer hover:text-black" />
+        <User className="cursor-pointer hover:text-black" />
       </div>
+
     </div>
   );
 }
